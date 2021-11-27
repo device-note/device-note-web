@@ -1,12 +1,15 @@
-import { Route, Routes } from 'react-router';
+import Header from '@components/organisms/Header';
+import PrivateRouter from './PrivateRouter';
+import PublicRouter from './PublicRouter';
 
-import Home from '@pages/Home';
+const isLoggedIn = false;
 
 function AppRouter(): React.ReactElement {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-    </Routes>
+    <>
+      <Header />
+      {isLoggedIn ? <PrivateRouter /> : <PublicRouter />}
+    </>
   );
 }
 
