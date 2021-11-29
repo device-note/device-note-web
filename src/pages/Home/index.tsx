@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 function Home(): JSX.Element {
   return (
-    <div>
+    <div style={{ height: 20000 }}>
       <Helmet>
         <title>Device Note</title>
       </Helmet>
