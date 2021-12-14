@@ -1,6 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Main = styled.main`
-  width: ${({ theme }) => theme.breakpoint.size.xl};
-  margin: 0 auto;
+  display: flex;
+  flex: 1;
+  max-width: ${({ theme }) => theme.breakpoint.size.xl};
+  width: 100%;
+  padding: 0 32px;
+  margin: 32px auto auto;
 `;
