@@ -14,7 +14,7 @@ module.exports = {
       {
         groups: [
           ['^@?\\w'],
-          [`^@(${foldersUnderSrc.join('|')})(/.*|$)`, '^\\.'],
+          [`^@?(${foldersUnderSrc.join('|')})(/.*|$)`, '^\\.'],
         ],
       },
     ],
