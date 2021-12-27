@@ -25,6 +25,10 @@ const StyledNavLink = styled(NavLink)`
   &:hover {
     color: ${({ theme: { colors } }) => colors.gray[800]};
   }
+
+  :last-child {
+    margin-right: 0;
+  }
 `;
 
 export default NavigationMenu;

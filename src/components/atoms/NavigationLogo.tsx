@@ -19,7 +19,7 @@ const StyledNavLink = styled(NavLink)`
       ${font.size.lg}
       ${font.weight.bold}
     `}
-  margin: 0 8px;
+  margin-right: 16px;
   color: ${({ theme: { colors } }) => colors.gray[800]};
 `;
 
