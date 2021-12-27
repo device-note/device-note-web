@@ -1,4 +1,6 @@
-import { css } from 'styled-components';
+import { css } from "styled-components";
+
+import { colors } from "./colors";
 
 export const fontSizeTheme = {
   xs: css`
@@ -70,11 +72,11 @@ export const fontWeightTheme = {
 } as const;
 
 export const breakpointSizes = {
-  sm: '640px',
-  md: '768px',
-  lg: '1024px',
-  xl: '1280px',
-  xxl: '1536px',
+  sm: "640px",
+  md: "768px",
+  lg: "1024px",
+  xl: "1280px",
+  xxl: "1536px",
 };
 
 export const breakpointQueries = {
@@ -86,6 +88,7 @@ export const breakpointQueries = {
 };
 
 export interface CustomThemeType {
+  colors: typeof colors;
   font: {
     size: typeof fontSizeTheme;
     weight: typeof fontWeightTheme;
@@ -97,6 +100,7 @@ export interface CustomThemeType {
 }
 
 export const defaultTheme: CustomThemeType = {
+  colors,
   font: {
     size: fontSizeTheme,
     weight: fontWeightTheme,

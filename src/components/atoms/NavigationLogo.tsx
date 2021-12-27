@@ -3,28 +3,24 @@ import type { To } from "react-router";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-interface NavigationMenuProps {
+interface NavigationLogoProps {
   to: To;
 }
 
-function NavigationMenu({
+function NavigationLogo({
   to,
   children,
-}: PropsWithChildren<NavigationMenuProps>): React.ReactElement {
+}: PropsWithChildren<NavigationLogoProps>): React.ReactElement {
   return <StyledNavLink to={to}>{children}</StyledNavLink>;
 }
 
 const StyledNavLink = styled(NavLink)`
   ${({ theme: { font } }) => `
-      ${font.size.base}
+      ${font.size.lg}
       ${font.weight.bold}
     `}
   margin: 0 8px;
-  color: ${({ theme: { colors } }) => colors.gray[500]};
-
-  &:hover {
-    color: ${({ theme: { colors } }) => colors.gray[800]};
-  }
+  color: ${({ theme: { colors } }) => colors.gray[800]};
 `;
 
-export default NavigationMenu;
+export default NavigationLogo;
